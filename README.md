@@ -6,6 +6,8 @@
 
 ---
 
+![](./media/screenshot.png)
+
 ## About
 
 This abstraction allows you to load an entire folder of images into named jit.gl.texture objects. The objects are created in an array via javascript. You can retrieve a specific texture with the message `outputtexture $1`, but you can also use the textures in other places of your code by using the texture names `tex0`, `tex1`, `tex2` etc.
