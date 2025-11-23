@@ -12,6 +12,8 @@ outlets = 2;
 
 // apply a filter or not to the texture, default=linear
 var tex_filter = 'linear';
+// apply a different type to the texture, default=auto
+var tex_type = 'auto';
 
 // use the first argument as context
 var ctx;
@@ -73,7 +75,8 @@ function add(f){
 	// post('load file from:', f, "\n");
 	var tex = new JitterObject('jit.gl.texture', ctx);
 	tex.name = base + textureSet.length;
-    tex.filter = tex_filter;	
+    tex.filter = tex_filter;
+    tex.type = tex_type;	
 	tex.read(f);
 	// post('dim:', tex.dim[0], tex.dim[1], "\n");
 	textureSet.push(tex);
@@ -113,6 +116,20 @@ function filter(type){
         
         for (i in textureSet){
             textureSet[i].filter = tex_filter;
+        }
+    }
+}
+
+// change the type for the textures
+function type(t){
+    if (t === 'auto' || t === 'char'
+        || t === 'long' || t === 'half'
+        || t === 'float16' || t === 'float32' 
+        || t === 'float'){
+        tex_type = t;
+        
+        for (i in textureSet){
+            textureSet[i].type = tex_type;
         }
     }
 }
