@@ -1,5 +1,8 @@
 # th.gl.texturefolder
 
+> [!WARNING]
+> This package is deprecated. Please install the [AV Toolbox](https://github.com/tmhglnd/av-toolbox) through the Package Manager in Max8/9
+
 #### [More visuals and code!](http://gumroad.com/tmhglnd)
 
 #### [Become a Patron!](https://www.patreon.com/bePatron?u=9649817)
